@@ -13,7 +13,7 @@
         <div class="outer-glass">
             <div class="glass" id="glass" onclick="closeModal()">
                 
-                <div class="flex">
+                <div id="flex" class="flex">
                     <p>Create a Record</p>
                     <p class="X">X</p>
                 </div>
@@ -45,7 +45,7 @@
                                 <input type="text" id="comments" name="comments" maxlength="500">
                             </div>
                             <divl>
-                                <input type="submit" id="submit-button" onclick="DisplayInfo()">
+                                <input type="submit" id="submit-button" onclick="DisplayInfo(); submitCloseModal()">
                             </divl>
                         </form>
                     </div>

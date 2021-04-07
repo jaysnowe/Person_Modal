@@ -34,6 +34,13 @@ function DisplayInfo() {
     //logSubmit();
 }
 
+function submitCloseModal(){
+    const glass = document.getElementById("glass");
+    const create_button = document.getElementById("create-button");
+    glass.style.display = "none";
+    create_button.style.display = "block";
+}
+
 function logSubmit(event){
     const log = document.getElementById("log")
     const raw_date = new Date();
@@ -50,10 +57,24 @@ function showModal(){
     create_button.style.display = "none";
 }
 
-// function closeModal(){
-//     const glass = document.getElementById("glass");
-//     glass.style.display = "none";
-//     const create_button = document.getElementById("create-button");
-//     create_button.style.display = "block";
-// }
+
+function closeModal(){
+    document.getElementById("glass").addEventListener('click', function(e){
+        e = window.event || e;
+        console.log(e);
+        const glass = document.getElementById("glass");
+        const flex = document.getElementById("flex");
+        const create_button = document.getElementById("create-button");
+        if (glass === e.target || flex === e.target){
+            
+            glass.style.display = "none";
+            
+            create_button.style.display = "block";
+        }
+        else{
+            // e.stopPropagation;
+        }
+    });
+}
+
 
