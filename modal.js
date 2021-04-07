@@ -44,8 +44,10 @@ function submitCloseModal(){
 function logSubmit(event){
     const log = document.getElementById("log")
     const raw_date = new Date();
-    const month = raw_date.getMonth();
-    const day = raw_date.getDate();
+    // const month = raw_date.getMonth();
+    const month = ((raw_date.getMonth() + 1) < 10 ? '0' : '') + (raw_date.getMonth() + 1);
+    // const day = raw_date.getDate();
+    const day = (raw_date.getDate() < 10 ? '0' : '') + raw_date.getDate();
     const year = raw_date.getFullYear();
     log.innerHTML = 'Form Submitted! Date: ' + month + "-" + day + "-" + year; 
 }
@@ -76,5 +78,22 @@ function closeModal(){
         }
     });
 }
+
+// const url = "FAKEhttps://ehzk6mgbt5.execute-api.us-east-1.amazonaws.com/dev/person";
+// const data = {
+//     fname: document.getElementById("fname").value,
+//     lname: document.getElementById("lname").value,
+//     age: document.getElementById("age").value,
+//     gender: document.getElementById("gender").value,
+//     email: document.getElementById("email").value,
+//     comments: document.getElementById("comments").value
+
+// }
+
+// $('submit-button').click(function(){
+//     $.post(url, data, function(data, status){
+//         console.log('${data} and status is ${status}')
+//     });
+// })
 
 
