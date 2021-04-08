@@ -44,6 +44,7 @@ function submitCloseModal(){
 function logSubmit(event){
     const log = document.getElementById("log")
     const raw_date = new Date();
+    
     // const month = raw_date.getMonth();
     const month = ((raw_date.getMonth() + 1) < 10 ? '0' : '') + (raw_date.getMonth() + 1);
     // const day = raw_date.getDate();
@@ -66,8 +67,9 @@ function closeModal(){
         console.log(e);
         const glass = document.getElementById("glass");
         const flex = document.getElementById("flex");
+        const close = document.getElementById("close-button")
         const create_button = document.getElementById("create-button");
-        if (glass === e.target || flex === e.target){
+        if (glass === e.target || flex === e.target || close === e.target){
             
             glass.style.display = "none";
             
