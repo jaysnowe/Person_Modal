@@ -8,11 +8,15 @@
 </head>
 <body>
     <div class="parent">
-        <h3>Parent Div</h3>
+        <h1>Modal - Create a Person Record</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        <h3>Text that will appear behind the modal</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
         <button id="create-button" onclick="showModal()">Create a Record</button>
-        <div class="outer-glass">
-            <div class="glass" id="glass" onclick="closeModal()">
-                
+        
+        <div class="glass" id="glass" onclick="closeModal()">
+           <div class="w3-modal-content">
                 <div id="flex" class="flex">
                     <p>Create a Record</p>
                     <p class="X">X</p>
@@ -58,9 +62,9 @@
 
             </div>
             <div id="response-container">
-                <div >
+                <!-- <div >
                     Person Created with id {}.
-                </div>
+                </div> -->
                 <div id="fname_response">
                 </div>
                 <div id="lname_response">
@@ -75,7 +79,9 @@
                 </div>
                 
             </div>
-        </div>
+           </div> 
+            
+        
         <p id="log"></p> 
     </div>
     <script src="modal.js"></script>
