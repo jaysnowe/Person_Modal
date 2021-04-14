@@ -25,6 +25,7 @@ function DisplayInfo() {
     let comments = document.getElementById("comments").value;
     let comments_response = document.getElementById("comments_response");
 
+    console.log('in DisplayInfo()');
     fname_response.innerHTML = 'First Name: ' + fname;
     lname_response.innerHTML = 'Last Name: ' + lname;
     age_response.innerHTML = 'Age: ' + age;
@@ -61,28 +62,26 @@ function showModal(){
 }
 
 
-function buttonBlock(){
-    const create_button = document.getElementById("create-button");
-    create_button.style.display = "block";
+function closeModal(){
+    
+    document.getElementById("glass").addEventListener('click', function(e){
+        e = window.event || e;
+        console.log(e);
+        const glass = document.getElementById("glass");
+        const flex = document.getElementById("flex");
+        const close = document.getElementById("close-button")
+        const create_button = document.getElementById("create-button");
+        if (glass === e.target || flex === e.target || close === e.target){
+            
+            glass.style.display = "none";
+            
+            create_button.style.display = "block";
+        }
+        else{
+            // e.stopPropagation;
+        }
+    });
 }
-//     document.getElementById("glass").addEventListener('click', function(e){
-//         e = window.event || e;
-//         console.log(e);
-//         const glass = document.getElementById("glass");
-//         const flex = document.getElementById("flex");
-//         const close = document.getElementById("close-button")
-//         const create_button = document.getElementById("create-button");
-//         if (glass === e.target || flex === e.target || close === e.target){
-            
-//             glass.style.display = "none";
-            
-//             create_button.style.display = "block";
-//         }
-//         else{
-//             // e.stopPropagation;
-//         }
-//     });
-// }
 
 // const url = "FAKEhttps://ehzk6mgbt5.execute-api.us-east-1.amazonaws.com/dev/person";
 // const data = {

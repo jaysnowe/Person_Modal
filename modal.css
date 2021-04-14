@@ -111,7 +111,7 @@ button{
 }
 
 #response-container{
-    /* border-style: solid; */
-    align-self: flex-end;
+    border-style: solid;
+    
     
 }

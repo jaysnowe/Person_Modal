@@ -17,7 +17,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
         <button id="create-button" onclick="showModal()">Create a Record</button>
         
-        <div class="glass"  onclick="document.getElementById('glass').style.display='none'; buttonBlock()" id="glass">
+        <div class="glass"  onclick="closeModal()" id="glass">
            <div class="w3-modal-content">
                 <div id="flex" class="flex">
                     <h4>Create a Record</h4>
@@ -27,7 +27,7 @@
                     <div>
                         <form id="form-modal" onsubmit="return false" action="" >
                             <div class="label-input">
-                                <label for="fname">First Name</label>
+                                <label for="fname" required>First Name</label>
                                 <input type="text" id="fname" name="fname" maxlength="100" required>
                             </div>
                             <div class="label-input">
@@ -56,35 +56,31 @@
                             </div>
                         </form>
                         <div class="close-holder">
-                            <button id="close-button" onclick="buttonBlock()">Close</button>
+                            <button id="close-button" onclick="closeModal()">Close</button>
                         </div>
                     </div>
-                    
                 </div>
-
-            </div>
-            <div id="response-container">
-                <!-- <div >
-                    Person Created with id {}.
-                </div> -->
-                <div id="fname_response">
-                </div>
-                <div id="lname_response">
-                </div>
-                <div id="age_response">
-                </div>
-                <div id="gender_response">
-                </div>
-                <div id="email_response">
-                </div>
-                <div id="comments_response">
-                </div>
-                
             </div>
            </div> 
+           <p id="log"></p>    
+           <div id="response-container">
+            <!-- <div >
+                Person Created with id {}.
+            </div> -->
+            <div id="fname_response">
+            </div>
+            <div id="lname_response">
+            </div>
+            <div id="age_response">
+            </div>
+            <div id="gender_response">
+            </div>
+            <div id="email_response">
+            </div>
+            <div id="comments_response">
+            </div>
             
-        
-        <p id="log"></p> 
+        </div>
     </div>
     <script src="modal.js"></script>
 </body>
