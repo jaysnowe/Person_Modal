@@ -89,6 +89,11 @@ button{
     color: #333;
 }
 
+#submit-holder{
+    padding-bottom: 0;
+    padding-right: 5px;
+}
+
 #close-button{
     background-color: #a1a6adb4;
     color: #333;
@@ -101,7 +106,8 @@ button{
 
 .close-holder{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    padding-right: 15px;
 }
 
 #response-container{
