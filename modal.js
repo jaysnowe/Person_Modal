@@ -61,25 +61,28 @@ function showModal(){
 }
 
 
-function closeModal(){
-    document.getElementById("glass").addEventListener('click', function(e){
-        e = window.event || e;
-        console.log(e);
-        const glass = document.getElementById("glass");
-        const flex = document.getElementById("flex");
-        const close = document.getElementById("close-button")
-        const create_button = document.getElementById("create-button");
-        if (glass === e.target || flex === e.target || close === e.target){
-            
-            glass.style.display = "none";
-            
-            create_button.style.display = "block";
-        }
-        else{
-            // e.stopPropagation;
-        }
-    });
+function buttonBlock(){
+    const create_button = document.getElementById("create-button");
+    create_button.style.display = "block";
 }
+//     document.getElementById("glass").addEventListener('click', function(e){
+//         e = window.event || e;
+//         console.log(e);
+//         const glass = document.getElementById("glass");
+//         const flex = document.getElementById("flex");
+//         const close = document.getElementById("close-button")
+//         const create_button = document.getElementById("create-button");
+//         if (glass === e.target || flex === e.target || close === e.target){
+            
+//             glass.style.display = "none";
+            
+//             create_button.style.display = "block";
+//         }
+//         else{
+//             // e.stopPropagation;
+//         }
+//     });
+// }
 
 // const url = "FAKEhttps://ehzk6mgbt5.execute-api.us-east-1.amazonaws.com/dev/person";
 // const data = {

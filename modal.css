@@ -1,11 +1,24 @@
 body{   
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
+
+button{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* div{
+    padding-left: 10px;
+    padding-right: 10px;
+} */
 
 #create-button{
     background-color: #006400;
+    color: white;
+}
+
+#create-button:hover{
+    background-color: #a1a6adb4;
+    color: #333;
 }
 
 .parent{
@@ -32,29 +45,63 @@ body{
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: fit-content;
 }
 
 .flex{
     display: flex;
     justify-content: space-between;
+    background-color: #758486;
+    padding: 10px;
 }
 
 .X{
-    border-style: solid;
+    border: solid #333;
     border-width: 2px;
 }
 
 #form-container{
     background-color: #fff;
-    border-radius: solid;
+    border-radius: solid #888;
     border-width: 2px;
     padding: 10px;
     
 }
 
+#form-modal{
+    display: grid;
+    justify-items: right;
+    padding: 10px;
+}
+
+.label-input{
+    padding: 2%;
+}
+
 #submit-button{
     background-color: #006400;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#submit-button:hover{
+    background-color: #a1a6adb4;
+    color: #333;
+}
+
+#close-button{
+    background-color: #a1a6adb4;
+    color: #333;
+}
+
+#close-button:hover{
+    background-color: #da700d;
+    color: white;
+}
+
+.close-holder{
+    display: flex;
+    justify-content: end;
 }
 
 #response-container{
