@@ -25,33 +25,42 @@
                 </div>
                 <div id="form-container">
                     <div>
-                        <form id="form-modal" onsubmit="return false" action="" >
+                        <form id="form-modal" 
+                        
+                        >
                             <div class="label-input">
-                                <label for="fname" required>First Name</label>
-                                <input type="text" id="fname" name="fname" maxlength="100" required>
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="fname" maxlength="100" class="field"/>
+                                <p class="validity">xThis field is required</p>
+                                
                             </div>
                             <div class="label-input">
                                 <label for="lname">Last Name</label>
-                                <input type="text" id="lname" name="lname" maxlength="100" required>
+                                <input type="text" id="lname" name="lname" maxlength="100" required class="field">
+                                <p class="validity">xThis field is required</p>
                             </div>
                             <div class="label-input">
                                 <label for="age">Age</label>
-                                <input type="number" id="age" name="age" maxlength="3" required>
+                                <input type="number" id="age" name="age" maxlength="3" required class="field">
+                                <p class="validity">xThis field is required</p>
                             </div>
                             <div class="label-input">
                                 <label for="gender">Gender</label>
-                                <input type="text" id="gender" name="gender" required>
+                                <input type="text" id="gender" name="gender" required class="field">
+                                <p class="validity">xThis field is required</p>
                             </div>
                             <div class="label-input">
                                 <label for="email">Email</label>
-                                <input type="text" id="email" name="email" maxlength="120" required>
+                                <input type="text" id="email" name="email" maxlength="120" required class="field">
+                                <p class="validity">xThis field is required</p>
                             </div>
                             <div class="label-input">
                                 <label for="comments">Comments</label>
-                                <input type="text" id="comments" name="comments" maxlength="500">
+                                <input type="text" id="comments" name="comments" maxlength="500" class="field">
+                                <p class="validity">xThis field is required</p>
                             </div>
                             <div id="submit-holder">
-                                <input type="submit" id="submit-button" onclick="DisplayInfo(); submitCloseModal()"; >
+                                <input  id="submit-button" onclick="DisplayInfo(); submitCloseModal()"; >
                                 
                             </div>
                         </form>
@@ -82,6 +91,7 @@
             
         </div>
     </div>
-    <script src="modal.js"></script>
+    
 </body>
+<script src="modal.js"></script>
 </html>

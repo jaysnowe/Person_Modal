@@ -78,6 +78,19 @@ button{
     padding: 2%;
 }
 
+.validity{
+    color: red;
+    display: none;
+}
+
+/* input:invalid {
+    border: 2px red dashed;
+} */
+
+/* input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+} */
+
 #submit-button{
     background-color: #006400;
     color: white;
