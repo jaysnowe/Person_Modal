@@ -2,6 +2,10 @@
 //targets the form to create submit event
 let form = document.getElementById("form-modal");
 const glass = document.getElementById("glass");
+const flex = document.getElementById("flex");
+const close = document.getElementById("close-button")
+const create_button = document.getElementById("create-button");
+const Xdiv = document.getElementById("X");
 
 form.addEventListener('submit', logSubmit);
 
@@ -38,24 +42,28 @@ function DisplayInfo() {
     //logSubmit();
 }
 
-const fields = document.getElementsByClassName("field");
+const fields = document.getElementsByClassName('field');
 const errors = document.getElementsByClassName("validity");
 
 document.addEventListener('DOMContentLoaded', (e) => {
     for (let i in fields){
     
         let element = fields[i];
-        
+        // TODO: adjust error for age length
+        // TODO: adjust error for comments not required
+        // TODO: look at change instead of blur
         
         let error_message = errors[i];
         try{
             element.addEventListener('blur', (e) => {
-        
+                
                 console.log(e.target.value);
-                // TODO: unique msg for age
-                // TODO: look at onchange instead of blur
-                if (element.value.length < 2 ){
+                
+                if (element.value.length < 1){
                     error_message.style.display = "block";
+                }
+                else if (e.target === comments){
+                    error_message.style.display = "none";
                 }
                 else{
                     error_message.style.display = "none";
@@ -65,8 +73,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             })
         }
         catch(Error){
-            // TODO: handle waiting for DOM to load properly
-            // console.log('element', element);
+            console.error();
         }
     }
 })
@@ -84,13 +91,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
 // })
 
 function submitCloseModal(){
-    const glass = document.getElementById("glass");
-    const create_button = document.getElementById("create-button");
     glass.style.display = "none";
     create_button.style.display = "block";
+    form.reset();
 }
 
-function logSubmit(event){
+
+
+function logSubmit(){
     const log = document.getElementById("log")
     const raw_date = new Date();
     
@@ -105,7 +113,6 @@ function logSubmit(event){
 function showModal(){
     // const glass = document.getElementById("glass");
     glass.style.display = "block";
-    const create_button = document.getElementById("create-button");
     create_button.style.display = "none";
 }
 
@@ -116,10 +123,8 @@ function closeModal(){
         e = window.event || e;
         // console.log(e);
         // const glass = document.getElementById("glass");
-        const flex = document.getElementById("flex");
-        const close = document.getElementById("close-button")
-        const create_button = document.getElementById("create-button");
-        if (glass === e.target || flex === e.target || close === e.target){
+        
+        if (glass === e.target || flex === e.target || Xdiv === e.target ||close === e.target){
             
             glass.style.display = "none";
             

@@ -21,7 +21,7 @@
            <div class="w3-modal-content">
                 <div id="flex" class="flex">
                     <h4>Create a Record</h4>
-                    <p class="X">X</p>
+                    <p id="X" class="X">X</p>
                 </div>
                 <div id="form-container">
                     <div>
@@ -60,7 +60,7 @@
                                 <p class="validity">xThis field is required</p>
                             </div>
                             <div id="submit-holder">
-                                <input  id="submit-button" onclick="DisplayInfo(); submitCloseModal()"; >
+                                <input id="submit-button" value="Submit" onclick="DisplayInfo(); submitCloseModal(); logSubmit()"; ></input>
                                 
                             </div>
                         </form>
