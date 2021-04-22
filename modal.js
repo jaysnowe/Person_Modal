@@ -42,33 +42,41 @@ function DisplayInfo() {
     //logSubmit();
 }
 
+//array of input fields
 const fields = document.getElementsByClassName('field');
+//array of <p> elements that hold the error to show user
 const errors = document.getElementsByClassName("validity");
 
 document.addEventListener('DOMContentLoaded', (e) => {
     for (let i in fields){
     
-        let element = fields[i];
+        let fieldArray = fields[i];
         // TODO: adjust error for age length
         // TODO: adjust error for comments not required
-        // TODO: look at change instead of blur
         
         let error_message = errors[i];
         try{
-            element.addEventListener('blur', (e) => {
+            fieldArray.addEventListener('blur', (e) => {
                 
-                console.log(e.target.value);
+                console.log(e.target);
+                console.log(fieldArray);
+                console.log(e.target.classList.contains('req'));
+                console.log(fname);
                 
-                if (element.value.length < 1){
+                //TODO: This works for all but fname.className. DOM sees the class "req" on all fields except for fname
+                if(fieldArray.value === "" && e.target.classList.contains('req')){
                     error_message.style.display = "block";
-                }
-                else if (e.target === comments){
-                    error_message.style.display = "none";
                 }
                 else{
                     error_message.style.display = "none";
                 }
-                
+                // if (e.target === age && fieldArray.value.length < 1){
+                //     error_message.style.display = "block";
+                //     console.log('caught the if!');
+                // }
+                // else if (e.target === comments){
+                //     error_message.style.display = "none";
+                // }
             
             })
         }
