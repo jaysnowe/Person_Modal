@@ -52,36 +52,49 @@ document.addEventListener('DOMContentLoaded', (e) => {
     
         let fieldArray = fields[i];
         // TODO: adjust error for age length
-        // TODO: adjust error for comments not required
         
         let error_message = errors[i];
         try{
             fieldArray.addEventListener('blur', (e) => {
                 
-                console.log(e.target);
-                console.log(fieldArray);
+                // console.log(e.target);
+                // console.log(fieldArray);
                 console.log(e.target.classList.contains('req'));
-                console.log(fname);
+                // console.log(fname);
+
+                if(e.target.classList.contains('req') && e.target != age && fieldArray.value >= 2){
+                    
+                        error_message.style.display = "none";
+                        console.log(e.target.classList.contains('req'));
                 
-                //TODO: This works for all but fname.className. DOM sees the class "req" on all fields except for fname
-                if(fieldArray.value === "" && e.target.classList.contains('req')){
-                    error_message.style.display = "block";
+                    // else{
+                    //     error_message.style.display = "block";
+                    //     console.log("first else");
+                    //     console.log(fieldArray.value);
+                    // }
+                } 
+
+                else if(e.target === age && fieldArray.value >= 1){
+                 
+                        error_message.style.display = "none";
+                    
+                    // else{
+                    //     error_message.style.display = "block";
+                    //     console.log("second else")
+                    // }
                 }
+
                 else{
-                    error_message.style.display = "none";
+                    error_message.style.display = "block";
+                    console.log("in else");
                 }
-                // if (e.target === age && fieldArray.value.length < 1){
-                //     error_message.style.display = "block";
-                //     console.log('caught the if!');
-                // }
-                // else if (e.target === comments){
-                //     error_message.style.display = "none";
-                // }
+                
             
             })
         }
         catch(Error){
             console.error();
+            console.log("catch");
         }
     }
 })
